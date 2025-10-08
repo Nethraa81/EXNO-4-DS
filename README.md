@@ -24,6 +24,42 @@ The feature selection techniques used are:
 3.Embedded Method
 
 # CODING AND OUTPUT:
-       # INCLUDE YOUR CODING AND OUTPUT SCREENSHOTS HERE
+```
+ # FEATURE SCALING
+ import pandas as pd
+ from scipy import stats
+ import numpy as np
+```
+```
+df=pd.read_csv("bmi.csv")
+df.head()
+```
+<img width="406" height="243" alt="image" src="https://github.com/user-attachments/assets/a1f774f7-255c-47de-b555-eb2500ddda19" />
+
+```
+ df_null_sum=df.isnull().sum()
+ df_null_sum
+```
+<img width="450" height="119" alt="Screenshot 2025-10-08 114751" src="https://github.com/user-attachments/assets/6ef73573-217b-4eda-86b0-979df226b421" />
+
+```
+df.dropna()
+```
+<img width="435" height="498" alt="image" src="https://github.com/user-attachments/assets/e69a8b16-84dc-4747-8446-9ee85029353a" />
+
+```
+ max_vals = np.max(np.abs(df[['Height', 'Weight']]), axis=0)
+ max_vals
+```
+<img width="466" height="72" alt="image" src="https://github.com/user-attachments/assets/8fe67515-f6e0-4b79-b0bc-1d2f17cfb04e" />
+
+```
+ from sklearn.preprocessing import StandardScaler
+ df1=pd.read_csv("bmi.csv")
+ df1.head()
+```
+
+       
 # RESULT:
-       # INCLUDE YOUR RESULT HERE
+Thus the program to read the given data and perform Feature Scaling and Feature Selection process and save the
+data to a file has been executed successfully. 
